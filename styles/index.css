@@ -1,0 +1,4 @@
+/* font should be 15px minimum in order to meet WCAG 2.1 guidelines */
+.p{
+	font-size: 20px;
+}
