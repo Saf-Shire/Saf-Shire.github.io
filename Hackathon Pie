@@ -1,0 +1,80 @@
+# you need the ipwidgets for the interactive pie chart
+
+pip install plotly
+pip install ipywidgets
+pip install "notebook>=5.3" "ipywidgets>=7.2"
+
+import matplotlib.pyplot as plt
+import numpy as np
+import plotly.graph_objs as go
+
+# for non-interactive layered pie
+
+labels = ['Male Service Workers', 'Female Service Workers']
+sizes = [63, 37]
+labels_sales = ['Male Sales Workers', 'Female Sales Workers']
+sizes_sales = [68, 32]
+colors = ['#FFB600', '#09A0DA']
+colors_sales = ['#FFCE53', '#30B7EA']
+
+labels_exec = ['Male Executives', 'Female Executives']
+sizes_exec = [81, 19]
+colors_exec = ['#FFE9B2','#B3E7FB']
+
+labels_management = ['Male Managers', 'Female Managers']
+sizes_management =[73, 27]
+colors_management = ['#FFDA7E','#7FD6F7']
+
+bigger = plt.pie(sizes, labels=labels, colors=colors, startangle=90)
+smaller = plt.pie(sizes_sales, labels=labels_sales, colors=colors_sales, radius=0.8, startangle=90, labeldistance=0.3)
+small = plt.pie(sizes_management, labels=labels_management, colors=colors_management, radius=0.6, startangle=90, labeldistance=0.6)
+eenie = plt.pie(sizes_exec, labels=labels_exec, colors=colors_exec, radius=0.4, startangle=90, labeldistance=1.2)
+
+centre_circle = plt.Circle((0,0), 0.2, color='white', linewidth=0)
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+plt.axis('equal')
+
+
+# interactive pie
+
+labelsservice = ['Male Service Workers', 'Female Service Workers']
+labelssales = ['Male Sales Workers', 'Female Sales Workers']
+labelman = ['Male Managers', 'Female Managers']
+labelexec = ['Male Executives', 'Female Executives']
+values_service = [264, 154]
+values_sales = [14485, 6830]
+values_man = [5955, 2250]
+values_exec = [87, 20]
+
+trace4 = go.Pie(
+    labels = labelexec,
+    values = values_exec,
+    direction='clockwise',
+    hole = 0.2,
+)
+
+trace3 = go.Pie(
+    labels = labelman,
+    values= values_man,
+    direction='clockwise',
+    hole=0.4,
+)
+
+trace2 = go.Pie(
+    labels=labelssales,
+    values=values_sales,
+    direction='clockwise',
+    hole=0.6,
+)
+
+trace1 = go.Pie(
+    labels=labelsservice,
+    values=values_service,
+    direction='clockwise',
+    hole=0.8, 
+)
+
+fig = go.FigureWidget(data=[trace4, trace3, trace2, trace1,])
+fig.show()   
