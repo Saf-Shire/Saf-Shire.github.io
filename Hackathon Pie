@@ -43,38 +43,64 @@ labelsservice = ['Male Service Workers', 'Female Service Workers']
 labelssales = ['Male Sales Workers', 'Female Sales Workers']
 labelman = ['Male Managers', 'Female Managers']
 labelexec = ['Male Executives', 'Female Executives']
+
 values_service = [264, 154]
 values_sales = [14485, 6830]
 values_man = [5955, 2250]
 values_exec = [87, 20]
 
-trace4 = go.Pie(
+colors_service = ['#339966', '#6600cc']
+colors_sales = ['#009933', '#6600ff']
+colors_management = ['#00cc00', '#6666ff']
+colors_exec = ['#66ff99', '#6699ff']
+
+
+# layout_service= dict(height=1000, width=1000,)
+# layout_sales= dict(height=800, width=800,)
+# layout_man= dict(height=600, width=600,)
+# layout_exec= dict(height=400, width=400,)
+
+Executives = go.Pie(
     labels = labelexec,
     values = values_exec,
-    direction='clockwise',
+    direction='counterclockwise',
     hole = 0.2,
+    marker_colors=colors_exec,
+    #layout=layout_exec,
 )
 
-trace3 = go.Pie(
+Management = go.Pie(
     labels = labelman,
     values= values_man,
-    direction='clockwise',
+    direction='counterclockwise',
     hole=0.4,
+    marker_colors=colors_management,
+    #layout=layout_man,
 )
 
-trace2 = go.Pie(
+Sales = go.Pie(
     labels=labelssales,
     values=values_sales,
-    direction='clockwise',
+    direction='counterclockwise',
     hole=0.6,
+    marker_colors=colors_sales,
+    #layout=layout_sales,
 )
 
-trace1 = go.Pie(
+Services = go.Pie(
     labels=labelsservice,
     values=values_service,
-    direction='clockwise',
+    direction='counterclockwise',
     hole=0.8, 
+    marker_colors=colors_service,
+    #layout=layout_service,
 )
 
-fig = go.FigureWidget(data=[trace4, trace3, trace2, trace1,])
-fig.show()   
+fig = go.FigureWidget(data=[Executives, Management, Sales, Services,])
+
+fig.update_traces(textposition='inside', textinfo='none')
+
+fig.update_layout(
+    annotations=[dict(text='CEO', x=0.5, y=0.5, font_size=20, showarrow=False)])
+
+fig.show() 
