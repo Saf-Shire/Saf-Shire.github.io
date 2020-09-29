@@ -1,13 +1,54 @@
-/* font should be 15px minimum to meet WCAG 2.1 guidelines */
+/* font size should be 15px minimum to meet WCAG 2.1 guidelines */
 p {
-	color: red; 
 	font-size: 15px;
 	font-family: sans-serif;
 }
 
 h1{
 	text-align: center;
-	font-family: sans-serif;
-	padding: 5%;
+	font-family: sans-serif, Courier;
 	font-size: 60px;
+	margin: 3%;
+}
+
+body > div.container > div > div:nth-child(1) > button{
+	font-size: 15px;
+	padding: 2%;
+}
+
+/* About Page formatting */
+.about-card{
+	background-color: #e3f2fd;
+}
+.about-right-section, .about-left-section {
+	background-color: #D5F5E3;
+	border-style: solid;
+	border-color: #145A32 ;
+	border-width: 2px;
+	border-radius: 25px 25px 25px 0px ;
+}
+.about-right-section p, .about-right-section h2 {
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.about-left-section p, .about-left-section h2 {
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.about-line{
+	border: solid;
+	border-color: #145A32 ;
+	border-radius: 2px;
+	border-width: 1px;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+.margin{
+	margin-left: 10%;
+	margin-right: 10%;
 }
