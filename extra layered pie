@@ -1,0 +1,114 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import plotly.graph_objs as go
+
+labelsservice = ['Male Service Workers', 'Female Service Workers']
+labelssales = ['Male Sales Workers', 'Female Sales Workers']
+labelman = ['Male Managers', 'Female Managers']
+labelexec = ['Male Executives', 'Female Executives']
+labelscraft = ['Male Craft Workers', 'Female Craft Workers']
+labelspro = ['Male Professionals', 'Female Professionals']
+labelsgrads = ['Male Graduate Target Intake', 'Female Graduate Target Intake']
+
+values_grads = [50, 50]
+values_service = [264, 154]
+values_sales = [14485, 6830]
+values_man = [5955, 2250]
+values_exec = [87, 20]
+values_craft = [11890, 5085]
+values_pro = [17293, 5907]
+
+colors_grad = ['#409070', '#6600bb']
+colors_service = ['#339966', '#6600cc']
+colors_sales = ['#009933', '#6600ff']
+colors_craft = ['#019040', '#6622ff']
+colors_management = ['#00cc00', '#6666ff']
+colors_pro = ['#33ff66', '#6677ff' ]
+colors_exec = ['#66ff99', '#6699ff']
+
+
+# layout_service= dict(height=1000, width=1000,)
+# layout_sales= dict(height=800, width=800,)
+# layout_man= dict(height=600, width=600,)
+# layout_exec= dict(height=400, width=400,)
+
+Executives = go.Pie(
+    labels = labelexec,
+    values = values_exec,
+    direction='counterclockwise',
+    hole = 0.3,
+    marker_colors=colors_exec,
+    hovertext="Insert target here.",
+    #layout=layout_exec,
+)
+
+Professionals = go.Pie(
+    labels = labelspro,
+    values= values_pro,
+    direction='counterclockwise',
+    hole=0.4,
+    marker_colors=colors_pro,
+    hovertext="Insert target here.",
+    #layout=layout_man,
+)
+
+Management = go.Pie(
+    labels = labelman,
+    values= values_man,
+    direction='counterclockwise',
+    hole=0.5,
+    marker_colors=colors_management,
+    hovertext="Insert target here.",
+    #layout=layout_man,
+)
+
+CraftWork = go.Pie(
+    labels = labelscraft,
+    values= values_craft,
+    direction='counterclockwise',
+    hole=0.6,
+    marker_colors=colors_craft,
+    hovertext="Insert target here.",
+    #layout=layout_man,
+)
+
+Sales = go.Pie(
+    labels=labelssales,
+    values=values_sales,
+    direction='counterclockwise',
+    hole=0.7,
+    marker_colors=colors_sales,
+    hovertext="Insert target here.",
+    #layout=layout_sales,
+)
+
+Services = go.Pie(
+    labels=labelsservice,
+    values=values_service,
+    direction='counterclockwise',
+    hole=0.8, 
+    marker_colors=colors_service,
+    hovertext="Insert target here."
+    #layout=layout_service,
+)
+
+Graduates = go.Pie(
+    labels=labelsgrads,
+    values=values_grads,
+    direction='counterclockwise',
+    hole=0.90, 
+    marker_colors=colors_grad,
+    hovertext="Insert target here."
+    #layout=layout_service,
+)
+
+fig = go.FigureWidget(data=[Executives, Professionals, Management, CraftWork, Sales, Services, Graduates,])
+
+fig.update_traces(textposition='inside', textinfo='none')
+
+fig.update_layout(
+    annotations=[dict(text='CEO', x=0.5, y=0.5, font_size=20, showarrow=False)],
+    showlegend=False,
+)
+
+fig.show()
