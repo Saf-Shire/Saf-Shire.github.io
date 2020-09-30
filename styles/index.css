@@ -16,6 +16,11 @@ body > div.container > div > div:nth-child(1) > button{
 	padding: 2%;
 }
 
+#\31 49a997e-9bfa-469e-98ae-809f044fc117 > div > div{
+	height: auto;
+	width: 100%;
+}
+
 /* About Page formatting */
 .about-card{
 	background-color: #e3f2fd;
