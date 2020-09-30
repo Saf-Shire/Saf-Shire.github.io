@@ -22,38 +22,10 @@
         <title>About Us</title>
 
     </head>
-
-        <!-- Navigation bar at the top of the page-->
-        <nav class="navbar navbar-expand-lg navbar-transparent navbar-light bg-light">
-			<a class="navbar-brand js-scroll-trigger" href="../cfg-vodafone-diversityhack/main.html">
-				<img src="images/logo-only.png" width="150" height="50" class="d-inline-block align-top" alt="">
-			</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    About Us
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="../cfg-vodafone-diversityhack/about.html">For businesses</a>
-					<a class="dropdown-item" href="../cfg-vodafone-diversityhack/about.html">Who we are</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Get in Touch</a>
-                </div>
-                </li>
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Seach here!" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            </div>
-        </nav>
-
+	<body>
+		<!-- navbar include -->
+		<div w3-include-HTML="navbar.html"></div>
+		
 		<div class="container">
 
 			<h1>For Business</h1>
@@ -108,7 +80,7 @@
 						  </div>
 						<div class="col-md-7">
 						  <h2 class="large-heading">Alya</h2>
-						  <p>Alya grew up in 4 different countries so she strongly values diversity and continuous learning. She fell in love with coding after she joined few coding courses after her graduation. She is very happy to be applying her coding skills in this Hackethon within a very smart team and on a topic very close to her heart!</p>
+						  <p>Alya grew up in 4 different countries so she strongly values diversity and continuous learning. She fell in love with coding after she joined few coding courses after her graduation. She is very happy to be applying her coding skills in this Hackathon within a very smart team and on a topic very close to her heart!</p>
 						</div>
 					  </div>
 					</div>
@@ -138,8 +110,8 @@
 							<img src="images/hazel-avatar.png" height="100%" width="100%" alt="">
 						  </div>
 						<div class="col-md-7">
-						  <h2 class="large-heading">Hazel Meades</h2>
-						  <p>Hazel is a UX Designer/freelance creative with <a href="">a lot of hobbies</a> (she's currently writing a story about a wellbeing chatbot gone rogue). She likes accessible design, chocolate, and writing about herself in third person.</p>
+						  <h2 class="large-heading">Hazel</h2>
+						  <p>Hazel is a UX Designer/freelance creative with <a href="https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fhazelmeades&e=ATMJJT5j8HsNXp8OE-m0iPXHpYZbC0E1RSDsC5TSmh7FmjkT90RQpBpj5uYPzxSvFBFUff8hunNb5KmfD4ZSZQ&s=1">a lot of hobbies</a>. She's been coding ever since her first Code First Girls course in 2018, and is very excited to be working in a team (for once) in this hackathon! She likes accessible design, chocolate, and writing about herself in third person.</p>
 						</div>
 					  </div>
 					</div>
@@ -153,7 +125,7 @@
 						  </div>
 						<div class="col-md-9">
 						  <h2 class="large-heading">Gabby</h2>
-						  <p>Gabby loves reading, learning Spanish and playing tennis. She is a recent Economics graduate who spent her summer learning Python with Code First Girls and is enjoying applying it in this Hackethon!</p>
+						  <p>Gabby loves reading, learning Spanish and playing tennis. She is a recent Economics graduate who spent her summer learning Python with Code First Girls and is enjoying applying it in this Hackathon!</p>
 						</div>
 					  </div>
 					</div>
@@ -163,5 +135,10 @@
 			<h1>Get In Touch</h1>
 		</div>
 		<br><br><br><br>
+		<!-- Call W3 js -->
+    <script src="js/w3-include-HTML.js"></script>
+	<script>
+		includeHTML();
+	</script>
 	</body>
 </html>
