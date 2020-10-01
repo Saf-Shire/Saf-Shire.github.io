@@ -1,15 +1,64 @@
 /* font size should be 15px minimum to meet WCAG 2.1 guidelines */
 p {
 	font-size: 15px;
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
+a{
+	font-size: 15px;
+}
+
+body > div:nth-child(3) > div > div:nth-child(1) > a > button{
+	font-size:15px;
+	font-family: 'Open Sans', sans-serif;
+}
+body > div.container > div.row > div > a > button{
+	font-size:15px;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 2%;
+}
+
+body{
+	background-color: ;
+}
+div.key{
+	background-color: #fce3f9;
+}
+div.svg.container{
+	border:solid;
+	border-color:black;
+}
 h1{
 	text-align: center;
-	font-family: sans-serif, Courier;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 60px;
 	margin-top: 3%;
 	margin-bottom: 0%;
+}
+.key h2{
+	font-family: 'Open Sans', sans-serif;
+	padding-bottom: 5%;
+	padding-top: 2%;
+	font-size: 30px;
+}
+.pink-underline{
+	text-decoration: underline;
+	text-decoration-color: #ff64fc;
+}
+
+del{
+	text-decoration-color: #ff64fc;
+}
+
+.key p{
+	padding: 2%;
+}
+
+.key{
+	border: solid;
+	padding-left: 2%;
+	padding-bottom: 2%;
+	margin-bottom: 5%;
 }
 
 body > div.container > div > div:nth-child(1) > button{
@@ -20,6 +69,48 @@ body > div.container > div > div:nth-child(1) > button{
 #\31 49a997e-9bfa-469e-98ae-809f044fc117 > div > div{
 	height: auto;
 	width: 100%;
+}
+
+#female{
+	background-color: rgb(102, 0, 187);
+	background-image: linear-gradient(to right, rgb(102, 0, 187), rgb(102, 153, 255));
+	width: /*60px;*/ 90%;
+	height: 60px;
+	border-radius: 30px;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+#male{
+	background-color: rgb(102, 0, 187);
+	background-image: linear-gradient(to right, rgb(102, 255, 153), rgb(64, 144, 112));
+	width: /*60px;*/ 90%;
+	height: 60px;
+	border-radius: 30px;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+#other{
+	background-color: #ebd234;
+	width: /*60px;*/ 90%;
+	height: 60px;
+	border-radius: 30px;
+	margin-right: 2%;
+}
+
+#undisclosed{
+	background-color: #eb4934;
+	width: /*60px;*/ 90%;
+	height: 60px;
+	border-radius: 30px;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+.key-edg{
+	margin-left:2%;
+	margin-top: 2%;
 }
 
 /* About Page formatting */
