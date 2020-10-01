@@ -46,14 +46,51 @@ h1{
 	text-decoration-color: #ff64fc;
 }
 
-.pink-arrow:hover{
+/*.pink-arrow:hover{
 	filter: grayscale(0%);
 }
 
+
 .pink-arrow{
 	filter: grayscale(100%);
+}*/
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.arrow-container{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50px;
 }
 
+/* When you mouse over the arrow-container, fade in the overlay image*/
+.arrow-container:hover .overlay {
+  opacity: 1;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay{
+	opacity:0;
+	transition: .3s ease;
+	position: absolute;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	height: 100%;
+	width: 100%;
+}
+
+/* The oimage inside the overlay is positioned in the middle vertically and horizontally */
+.pink-arrow-fill{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+/* Colour for "Un" strikethough */
 del{
 	text-decoration-color: #ff64fc;
 }
