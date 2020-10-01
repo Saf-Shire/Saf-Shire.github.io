@@ -46,6 +46,14 @@ h1{
 	text-decoration-color: #ff64fc;
 }
 
+.pink-arrow:hover{
+	filter: grayscale(0%);
+}
+
+.pink-arrow{
+	filter: grayscale(100%);
+}
+
 del{
 	text-decoration-color: #ff64fc;
 }
