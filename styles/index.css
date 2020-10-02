@@ -118,16 +118,6 @@ del{
 	margin-bottom: 5%;
 }
 
-body > div.container > div > div:nth-child(1) > button{
-	font-size: 15px;
-	padding: 2%;
-}
-
-#\31 49a997e-9bfa-469e-98ae-809f044fc117 > div > div{
-	height: auto;
-	width: 100%;
-}
-
 #female{
 	background-color: rgb(102, 0, 187);
 	background-image: linear-gradient(to right, rgb(102, 0, 187), rgb(102, 153, 255));
