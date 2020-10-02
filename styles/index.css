@@ -24,6 +24,9 @@ body{
 div.key{
 	background-color: #fce3f9;
 }
+.strip{
+	background-color:#ffc2f8;
+}
 div.svg.container{
 	border:solid;
 	border-color:black;
@@ -44,6 +47,10 @@ h1{
 .pink-underline{
 	text-decoration: underline;
 	text-decoration-color: #ff64fc;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Container needed to position the overlay. Adjust the width as needed */
