@@ -24,8 +24,22 @@ body{
 div.key{
 	background-color: #fce3f9;
 }
+#about-us{
+	margin-bottom: 5%;
+}
 .strip{
 	background-color:#ffc2f8;
+}
+.purple-strip{
+	background-color: #dbb3fc;
+}
+.margin{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.half-margin{
+	margin-left: 5%;
+	margin-right: 5%;
 }
 div.svg.container{
 	border:solid;
@@ -151,7 +165,7 @@ body > div.container > div > div:nth-child(1) > button{
 	margin-left: 2%;
 }
 
-.key-edg{
+.key-edge{
 	margin-left:2%;
 	margin-top: 2%;
 }
@@ -171,7 +185,10 @@ div.card{
 	border-width: 2px;
 }
 
-.margin{
-	margin-left: 10%;
-	margin-right: 10%;
+div.pink-aura{
+	background-color:#fcebfc;
+}
+
+div.blue-aura{
+	background-color:#eddcfc;
 }
