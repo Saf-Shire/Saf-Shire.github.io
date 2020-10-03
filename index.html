@@ -80,17 +80,35 @@
 				</a>
 			</div> -->
 			
-			<a name="chart">
-				<div class="tab">
-				  <button class="tablinks" onclick="openCity(event, 'Gender')">Gender</button>
-				  <button class="tablinks" onclick="openCity(event, 'Race')">Race</button>
-				  <button class="tablinks" onclick="openCity(event, 'Age')">Age</button>
-				</div>
-			</a>
-
-			<div id="Gender" class="tabcontent">
 			
-				<!-- Chart html -->
+
+			
+			
+				
+	
+	
+	
+			
+		<nav id="chart">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+			  <li class="nav-item">
+				<a class="nav-link active" id="gender-tab" data-toggle="tab" href="#gender" role="tab" aria-controls="gender" aria-selected="true">Gender</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" id="race-tab" data-toggle="tab" href="#race" role="tab" aria-controls="race" aria-selected="false">Race</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" id="age-tab" data-toggle="tab" href="#age" role="tab" aria-controls="age" aria-selected="false">Age</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" id="comparison-tab" data-toggle="tab" href="#comparison" role="tab" aria-controls="comparison" aria-selected="false">Comparison</a>
+			  </li>
+			</ul>
+		</nav>
+		
+		<div class="tab-content" id="nav-tabContent">
+			<div class="tab-pane show fade active" id="gender" role="tabpanel" aria-labelledby="gender-tab">
+			  <!-- Chart html -->
 				 <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="//plotly.com/~hazelmakesdata/3.embed"></iframe>
 	
 				<!-- Key -->
@@ -142,16 +160,26 @@
 					</div>
 				</a>
 			</div>
-		</div>
-		<div id="Race" class="tabcontent">
-		  <p>Coming soon!</p> 
-		</div>
-
-		<div id="Age" class="tabcontent">
-		  <p>Coming soon!</p>
+			<div class="tab-pane fade" id="race" role="tabpanel" aria-labelledby="race-tab">
+			  <p>Coming soon!</p>
+			</div>
+			<div class="tab-pane fade" id="age" role="tabpanel" aria-labelledby="age-tab">
+			  <p>Coming soon!</p>
+			</div>
+			<div class="tab-pane fade" id="comparison" role="tabpanel" aria-labelledby="comparison-tab">
+			  <p>Coming soon!</p>
+			</div>
 		</div>
 		
-		
+		<div class="tab-content" id="myTabContent">
+		  <div class="tab-pane fade" id="gender" role="tabpanel" aria-labelledby="gender-tab">...</div>
+		  <div class="tab-pane fade" id="gender" role="tabpanel" aria-labelledby="gender-tab">...</div>
+		  <div class="tab-pane fade" id="race" role="tabpanel" aria-labelledby="race-tab">...</div>
+		  <div class="tab-pane fade" id="age" role="tabpanel" aria-labelledby="age-tab">...</div>
+		  <div class="tab-pane fade" id="comparison" role="tabpanel" aria-labelledby="comparison-tab">...</div>
+		</div>
+		</div>
+		<br><br>
 		<!-- Up Arrow -->
 		<div class="arrow-container">
 			<a href="index.html#chart">

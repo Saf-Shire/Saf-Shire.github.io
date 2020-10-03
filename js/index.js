@@ -84,8 +84,8 @@ var data=[{
 
  Plotly.newPlot('myDiv', data, layout, {scrollZoom: true});
  
- /* Tab function */
- function openCity(evt, cityName) {
+ /* Tab function 
+ function openCategory(evt, diversityCategory) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -95,7 +95,7 @@ var data=[{
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(diversityCategory).style.display = "block";
   evt.currentTarget.className += " active";
-}
+}*/
     
