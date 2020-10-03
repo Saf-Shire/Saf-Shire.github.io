@@ -23,6 +23,7 @@ body > div.container > div.row > div > a > button{
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  border-color: black;
 }
 
 /* Style the buttons inside the tab */
@@ -49,7 +50,7 @@ body > div.container > div.row > div > a > button{
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
+  displa: none;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
