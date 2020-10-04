@@ -34,22 +34,11 @@ body > div.container > div.row > div > a > button{
   /*overflow: hidden; /what does this mean? */ 
 }
 
-#race-tab:hover, #gender-tab:hover, #age-tab:hover, #comparison-tab:hover{
-	background-color: #ff64fc;
-	transition: .3 ease;
-}
-
 .selected-tab {
-	background-color: #ffc2f8;
 	font-weight: bold;
 	font-family: 'Open Sans', sans-serif;
 }
-/*
-.deselected-tab{
-	background-color: white;
-	font-weight: normal;
-	font-family: 'Open Sans', sans-serif;
-}*/
+
 #race-tab, #age-tab, #comparison-tab{
 	margin-left: 5px;
 }

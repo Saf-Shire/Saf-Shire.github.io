@@ -21,54 +21,53 @@
 	<!-- Google Fonts API -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     
-    <!-- This is what shows up in the tab when you open the website -->
-    <title>Gender Bias Visualisation</title>
-    
 	<!-- Load plotly.js into the DOM -->
 	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 	
+    <!-- This is what shows up in the tab when you open the website -->
+    <title>Gender Bias Visualisation</title>
+	
   </head>
-	  <body>
+	  <body class="no-scroll-y">
 	  
 		<!-- Navigation bar at the top of the page-->
 		<nav class="navbar navbar-expand-lg navbar-transparent navbar-light bg-light">
-			<a class="navbar-brand js-scroll-trigger" href="../cfg-vodafone-diversityhack/index.html">
-				<img src="images/logo-edit.png" width="100px" height="auto" class="d-inline-block align-top" alt="Unconscious Data Bias Home">
+			<a class="navbar-brand" href="index.html">
+			<img src="images/logo-edit.png" width="100px" height="auto" class="d-inline-block align-top" alt="Unconscious Data Bias Home">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
-
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					About Us
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="../cfg-vodafone-diversityhack/about.html">For Businesses</a>
-					<a class="dropdown-item" href="../cfg-vodafone-diversityhack/about.html#bios">Who We Are</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="../cfg-vodafone-diversityhack/about.html#contact">Get in Touch</a>
-				</div>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search here!" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						About Us
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="about.html">For Businesses</a>
+						<a class="dropdown-item" href="about.html#bios">Who We Are</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="about.html#contact">Get in Touch</a>
+					</div>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search here!" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
 			</div>
 		</nav>
 
 		<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
 		<div class="container">
-		
 			<h1><del>Un</del>conscious Gender Bias</h1>
 
 			<br><br><br>
 			
 			<p class="text-center margin">Click/hover over a segment of the chart below to see a breakdown of gender diversity within your workforce! Each ring represents a different role level within your company.</p>
-						<br>
+			
+			<br>
 			
 			<!-- Down Arrow -->
 			<div class="arrow-container">
@@ -79,32 +78,34 @@
 					</div>
 				</a>
 			</div>
+			
 			<br><br><br>
 
 		<!-- Tab Menu -->
 		<nav id="chart">
 			<ul class="nav nav-tabs justify-content-center nav-justified flex-column flex-sm-row" id="myTab" role="tablist">
-			  <li class="nav-item">
-				<a class="nav-link" id="gender-tab" data-toggle="tab" href="#gender" role="tab" aria-controls="gender" aria-selected="true" onclick="changeGenderColour()">Gender</a>
+			  <li class="nav-item" role="tab">
+				<a class="nav-link" id="gender-tab" data-toggle="tab" href="#gender" aria-controls="gender" aria-selected="true" onclick="changeGenderColour()">Gender</a>
 			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" id="race-tab" data-toggle="tab" href="#race" role="tab" aria-controls="race" aria-selected="false" onclick="changeRaceColour()">Race</a>
+			  <li class="nav-item" role="tab">
+				<a class="nav-link" id="race-tab" data-toggle="tab" href="#race"  aria-controls="race" aria-selected="false" onclick="changeRaceColour()">Race</a>
 			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" id="age-tab" data-toggle="tab" href="#age" role="tab" aria-controls="age" aria-selected="false" onclick="changeAgeColour()">Age</a>
+			  <li class="nav-item" role="tab">
+				<a class="nav-link" id="age-tab" data-toggle="tab" href="#age"  aria-controls="age" aria-selected="false" onclick="changeAgeColour()">Age</a>
 			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" id="comparison-tab" data-toggle="tab" href="#comparison" role="tab" aria-controls="comparison" aria-selected="false" onclick="changeComparisonColour()">Comparison</a>
+			  <li class="nav-item" role="tab">
+				<a class="nav-link" id="comparison-tab" data-toggle="tab" href="#comparison" aria-controls="comparison" aria-selected="false" onclick="changeComparisonColour()">Comparison</a>
 			  </li>
 			</ul>
 		</nav>
 		
 		<!-- Tab Content -->
 		<div class="tab-content" id="nav-tabContent">
-			<div class="tab-pane show fade" id="gender" role="tabpanel" aria-labelledby="gender-tab">
+			<div class="tab-pane fade" id="gender" role="tabpanel" aria-labelledby="gender-tab">
 			
 				<div class="row">
 					<div class="col-md-6">
+				
 						<!-- 2016 Chart -->
 						<br>
 						<h2 class="chart-header text-center"><strong>2016</strong></h2>
@@ -167,13 +168,13 @@
 				</div>
 				
 			</div>
-		  <div class="tab-pane show fade" id="race" role="tabpanel" aria-labelledby="race">
+		  <div class="tab-pane fade" id="race" role="tabpanel" aria-labelledby="race">
 			<p>Coming soon!</p>
 		  </div>
-		  <div class="tab-pane show fade" id="age" role="tabpanel" aria-labelledby="age">
+		  <div class="tab-pane fade" id="age" role="tabpanel" aria-labelledby="age">
 			<p>Coming soon2!</p>
 		  </div>
-		  <div class="tab-pane show fade" id="comparison" role="tabpanel" aria-labelledby="comparison">
+		  <div class="tab-pane fade" id="comparison" role="tabpanel" aria-labelledby="comparison">
 			<p>Coming soon!3</p>
 		  </div>
 		</div>
