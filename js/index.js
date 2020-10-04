@@ -84,60 +84,46 @@ var data=[{
  
 /* Function sets selected tab to a specific background colour and sets everything else to the other colour on click */ 
 
-
 function changeGenderColour() {
    var element = document.getElementById("gender-tab");
-   element.classList.add("selected-tab");
+   element.style.backgroundColor="#ffc2f8";
    var element = document.getElementById("race-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
    var element = document.getElementById("age-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
    var element = document.getElementById("comparison-tab");
-   element.classList.remove("selected-tab");
+  element.style.backgroundColor="white";
 }
 function changeComparisonColour() {
    var element = document.getElementById("comparison-tab");
-   element.classList.add("selected-tab");
+   element.style.backgroundColor="#ffc2f8";
    var element = document.getElementById("race-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
    var element = document.getElementById("age-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
    var element = document.getElementById("gender-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
 }
 function changeRaceColour() {
    var element = document.getElementById("race-tab");
-   element.classList.add("selected-tab");
+   element.style.backgroundColor="#ffc2f8";
    var element = document.getElementById("gender-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
    var element = document.getElementById("age-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
    var element = document.getElementById("comparison-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
 }
 function changeAgeColour() {
    var element = document.getElementById("age-tab");
-   element.classList.add("selected-tab");
+   element.style.backgroundColor="#ffc2f8";
    var element = document.getElementById("race-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
    var element = document.getElementById("gender-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
    var element = document.getElementById("comparison-tab");
-   element.classList.remove("selected-tab");
+   element.style.backgroundColor="white";
 }
-
-/*Only adds highlight to unselected function
-function tabHighlight() {
-   if document.getElementById("age-tab").style.backgroundColor = "lightblue"
-   else
-   element.classList.add("tab-hover");
-   var element = document.getElementById("race-tab");
-   element.classList.remove("tab-hover");
-   var element = document.getElementById("gender-tab");
-   element.classList.remove("tab-hover");
-   var element = document.getElementById("comparison-tab");
-   element.classList.remove("tab-hover");
-}*/
 
 /* Set gender tab background color on automatic load */
 $(document).ready(function(){
