@@ -83,50 +83,53 @@ var data=[{
  Plotly.newPlot('myDiv', data, layout, {scrollZoom: true});*/
  
 /* Function sets selected tab to a specific background colour and sets everything else to the other colour on click */ 
+
+
 function changeGenderColour() {
    var element = document.getElementById("gender-tab");
-   element.classList.add("pink-background");
+   element.classList.add("selected-tab");
    var element = document.getElementById("race-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
    var element = document.getElementById("age-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
    var element = document.getElementById("comparison-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
 }
 function changeComparisonColour() {
    var element = document.getElementById("comparison-tab");
-   element.classList.add("pink-background");
+   element.classList.add("selected-tab");
    var element = document.getElementById("race-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
    var element = document.getElementById("age-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
    var element = document.getElementById("gender-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
 }
 function changeRaceColour() {
    var element = document.getElementById("race-tab");
-   element.classList.add("pink-background");
+   element.classList.add("selected-tab");
    var element = document.getElementById("gender-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
    var element = document.getElementById("age-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
    var element = document.getElementById("comparison-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
 }
 function changeAgeColour() {
    var element = document.getElementById("age-tab");
-   element.classList.add("pink-background");
+   element.classList.add("selected-tab");
    var element = document.getElementById("race-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
    var element = document.getElementById("gender-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
    var element = document.getElementById("comparison-tab");
-   element.classList.remove("pink-background");
+   element.classList.remove("selected-tab");
 }
 
-/*Only adds highlight to unselected function*/
+/*Only adds highlight to unselected function
 function tabHighlight() {
-   var element = document.getElementById("age-tab");
+   if document.getElementById("age-tab").style.backgroundColor = "lightblue"
+   else
    element.classList.add("tab-hover");
    var element = document.getElementById("race-tab");
    element.classList.remove("tab-hover");
@@ -134,12 +137,33 @@ function tabHighlight() {
    element.classList.remove("tab-hover");
    var element = document.getElementById("comparison-tab");
    element.classList.remove("tab-hover");
-}
+}*/
 
-
-/* Experimenting with code to load the gender tab (default open tab) on page load */
+/* Set gender tab background color on automatic load */
 $(document).ready(function(){
 	var element = document.getElementById("gender-tab");
-	element.classList.add("pink-background");
+	element.classList.add("selected-tab");
 });
+
+/* Tab Functionality 
+function openTab(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(cityName).style.display = "block";
+}
     
+	
+$(document).ready(function(){
+  $(".nav-tab a").click(function(){
+    $(this).tab('show');
+  });
+  $('.nav-tabs a').on('shown.bs.tab', function(event){
+    var x = $(event.target).text();         // active tab
+    var y = $(event.relatedTarget).text();  // previous tab
+    $(".act span").text(x);
+    $(".prev span").text(y);
+  });
+});*/

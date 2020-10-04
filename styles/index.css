@@ -39,11 +39,17 @@ body > div.container > div.row > div > a > button{
 	transition: .3 ease;
 }
 
-.pink-background {
+.selected-tab {
 	background-color: #ffc2f8;
 	font-weight: bold;
 	font-family: 'Open Sans', sans-serif;
 }
+/*
+.deselected-tab{
+	background-color: white;
+	font-weight: normal;
+	font-family: 'Open Sans', sans-serif;
+}*/
 #race-tab, #age-tab, #comparison-tab{
 	margin-left: 5px;
 }
