@@ -124,6 +124,19 @@ function changeAgeColour() {
    element.classList.remove("pink-background");
 }
 
+/*Only adds highlight to unselected function*/
+function tabHighlight() {
+   var element = document.getElementById("age-tab");
+   element.classList.add("tab-hover");
+   var element = document.getElementById("race-tab");
+   element.classList.remove("tab-hover");
+   var element = document.getElementById("gender-tab");
+   element.classList.remove("tab-hover");
+   var element = document.getElementById("comparison-tab");
+   element.classList.remove("tab-hover");
+}
+
+
 /* Experimenting with code to load the gender tab (default open tab) on page load */
 $(document).ready(function(){
 	var element = document.getElementById("gender-tab");
