@@ -37,10 +37,10 @@ body > div.container > div.row > div > a > button{
 /*#race-tab:active, #gender-tab:active, #age-tab:active, #comparison-tab:active*/
 
 .pink-background {
-	background-color: *#ffc2f8*;
+	background-color: #ffc2f8;
 	font-weight: bold;
 	font-family: 'Open Sans', sans-serif;
-
+}
 #race-tab, #age-tab, #comparison-tab{
 	margin-left: 5px;
 }
