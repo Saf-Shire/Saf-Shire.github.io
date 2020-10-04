@@ -128,5 +128,5 @@ function changeAgeColour() {
 $(document).ready(function(){
 	var element = document.getElementById("gender-tab");
 	element.classList.add("pink-background");
-}
+});
     

@@ -34,7 +34,13 @@ body > div.container > div.row > div > a > button{
   /*overflow: hidden; /what does this mean? */ 
 }
 
-/*#race-tab:active, #gender-tab:active, #age-tab:active, #comparison-tab:active*/
+#race-tab:active, #gender-tab:active, #age-tab:active, #comparison-tab:active{
+	background-color: #ffc2f8;
+}
+#race-tab:hover, #gender-tab:hover, #age-tab:hover, #comparison-tab:hover{
+	background-color: #ff64fc;
+	transition: .3 ease;
+}
 
 .pink-background {
 	background-color: #ffc2f8;
