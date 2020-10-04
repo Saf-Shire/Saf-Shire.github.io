@@ -82,10 +82,10 @@ var data=[{
 
  Plotly.newPlot('myDiv', data, layout, {scrollZoom: true});*/
  
-/* Automatically opens gender tab after load*/
+/* Automatically opens gender tab after load
 window.onload=function(){
   document.getElementById("gender-tab").click();
-};
+};*/
 
 /* Sets Gender tab to a specific background colour and sets all other tabs to white on click */ 
 function changeGenderColour() {
@@ -162,16 +162,6 @@ function changeAgeColour() {
    element.style.backgroundColor="white";
    element.style.fontWeight="initial";
 }
-
-/* Tab Functionality 
-function openTab(cityName) {
-  var i;
-  var x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(cityName).style.display = "block";
-}*/
 
 $(document).ready(function(){
   $(".nav-tabs a").click(function(){
