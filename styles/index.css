@@ -18,7 +18,7 @@ body > div.container > div.row > div > a > button{
 	margin-top: 2%;
 }
 
-/* Style the buttons inside the tab */
+/* Style the tab */
 #race-tab, #gender-tab, #age-tab, #comparison-tab {
   border: solid;
   border-bottom: none;
@@ -29,11 +29,17 @@ body > div.container > div.row > div > a > button{
   transition: 0.3s;
   font-size: 17px;
   border-radius: 15px 15x 0px 0px;
-  background-color: white;
   font-family: 'Open Sans', sans-serif;
   color:black;
-  
+  /*overflow: hidden; /what does this mean? */ 
 }
+
+/*#race-tab:active, #gender-tab:active, #age-tab:active, #comparison-tab:active*/
+
+.pink-background {
+	background-color: *#ffc2f8*;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
 
 #race-tab, #age-tab, #comparison-tab{
 	margin-left: 5px;
@@ -44,17 +50,7 @@ body > div.container > div.row > div > a > button{
 	border-color: black;
 }
 
-/* Style the tab content */
-.tabcontent {
-  display: block;
-  padding: 6px 12px;
-  border: 1px solid black;
-  border-top: none;
-}
-#gender-tab:focus, #race-tab:focus, #age-tab:focus, #comparison-tab:focus{
-	background-color: #ffc2f8;
-	font-weight: bold;
-	font-family: 'Open Sans', sans-serif;
+
 }
 .chart-header{
 	font-size: 30px;
@@ -107,10 +103,7 @@ div.key{
 	margin-left: 5%;
 	margin-right: 5%;
 }
-div.svg.container{
-	border:solid;
-	border-color:black;
-}
+
 h1{
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
@@ -154,7 +147,7 @@ html {
 	width: 100%;
 }
 
-/* The oimage inside the overlay is positioned in the middle vertically and horizontally */
+/* The image inside the overlay is positioned in the middle vertically and horizontally */
 .pink-arrow-fill{
 	position: absolute;
 	top: 50%;
@@ -166,6 +159,33 @@ html {
 /* Colour for "Un" strikethough */
 del{
 	text-decoration-color: #ff64fc;
+}
+
+/* About Page formatting */
+.card-body{
+	background-color: #e3f2fd;
+	border-style: solid;
+	border-color: #145A32;
+	border-radius: 0px 0px 30px 30px;
+	border-width: 1px;
+}
+div.card{
+	border-style: solid;
+	border-color: #145A32;
+	border-radius: 30px 30px 30px 30px;
+	border-width: 2px;
+}
+
+div.pink-aura{
+	background-color:#fcebfc;
+}
+
+div.blue-aura{
+	background-color:#eddcfc;
+}
+
+#about-us{
+	margin-bottom: 5%;
 }
 
 a:hover.accessible-link, a.accessible-link{
@@ -207,31 +227,4 @@ a:hover.accessible-link, a.accessible-link{
 	border-radius: 30px;
 	margin-right: 2%;
 	margin-left: 2%;
-}
-
-/* About Page formatting */
-.card-body{
-	background-color: #e3f2fd;
-	border-style: solid;
-	border-color: #145A32;
-	border-radius: 0px 0px 30px 30px;
-	border-width: 1px;
-}
-div.card{
-	border-style: solid;
-	border-color: #145A32;
-	border-radius: 30px 30px 30px 30px;
-	border-width: 2px;
-}
-
-div.pink-aura{
-	background-color:#fcebfc;
-}
-
-div.blue-aura{
-	background-color:#eddcfc;
-}
-
-#about-us{
-	margin-bottom: 5%;
 }

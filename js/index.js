@@ -1,4 +1,4 @@
-@@ -0,0 +1,85 @@
+/*@@ -0,0 +1,85 @@
 
 var allLabels=[
 labelsservice = ['Male Service Workers', 'Female Service Workers'],
@@ -80,22 +80,53 @@ var data=[{
 };
 
 
-
-
- Plotly.newPlot('myDiv', data, layout, {scrollZoom: true});
+ Plotly.newPlot('myDiv', data, layout, {scrollZoom: true});*/
  
- /* Tab function 
- function openCategory(evt, diversityCategory) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(diversityCategory).style.display = "block";
-  evt.currentTarget.className += " active";
-}*/
+/* Function sets selected tab to a specific background colour and sets everything else to the other colour on click */ 
+function changeGenderColour() {
+   var element = document.getElementById("gender-tab");
+   element.classList.add("pink-background");
+   var element = document.getElementById("race-tab");
+   element.classList.remove("pink-background");
+   var element = document.getElementById("age-tab");
+   element.classList.remove("pink-background");
+   var element = document.getElementById("comparison-tab");
+   element.classList.remove("pink-background");
+}
+function changeComparisonColour() {
+   var element = document.getElementById("comparison-tab");
+   element.classList.add("pink-background");
+   var element = document.getElementById("race-tab");
+   element.classList.remove("pink-background");
+   var element = document.getElementById("age-tab");
+   element.classList.remove("pink-background");
+   var element = document.getElementById("gender-tab");
+   element.classList.remove("pink-background");
+}
+function changeRaceColour() {
+   var element = document.getElementById("race-tab");
+   element.classList.add("pink-background");
+   var element = document.getElementById("gender-tab");
+   element.classList.remove("pink-background");
+   var element = document.getElementById("age-tab");
+   element.classList.remove("pink-background");
+   var element = document.getElementById("comparison-tab");
+   element.classList.remove("pink-background");
+}
+function changeAgeColour() {
+   var element = document.getElementById("age-tab");
+   element.classList.add("pink-background");
+   var element = document.getElementById("race-tab");
+   element.classList.remove("pink-background");
+   var element = document.getElementById("gender-tab");
+   element.classList.remove("pink-background");
+   var element = document.getElementById("comparison-tab");
+   element.classList.remove("pink-background");
+}
+
+/* Experimenting with code to load the gender tab (default open tab) on page load */
+$(document).ready(function(){
+	var element = document.getElementById("gender-tab");
+	element.classList.add("pink-background");
+}
     

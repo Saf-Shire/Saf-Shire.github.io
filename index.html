@@ -84,22 +84,22 @@
 		<nav id="chart">
 			<ul class="nav nav-tabs justify-content-center nav-justified flex-column flex-sm-row" id="myTab" role="tablist">
 			  <li class="nav-item">
-				<a class="nav-link" id="gender-tab" data-toggle="tab" href="#gender" role="tab" aria-controls="gender" aria-selected="true">Gender</a>
+				<a class="nav-link" id="gender-tab" data-toggle="tab" href="#gender" role="tab" aria-controls="gender" aria-selected="true" onclick="changeGenderColour()">Gender</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" id="race-tab" data-toggle="tab" href="#race" role="tab" aria-controls="race" aria-selected="false">Race</a>
+				<a class="nav-link" id="race-tab" data-toggle="tab" href="#race" role="tab" aria-controls="race" aria-selected="false" onclick="changeRaceColour()">Race</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" id="age-tab" data-toggle="tab" href="#age" role="tab" aria-controls="age" aria-selected="false">Age</a>
+				<a class="nav-link" id="age-tab" data-toggle="tab" href="#age" role="tab" aria-controls="age" aria-selected="false" onclick="changeAgeColour()">Age</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" id="comparison-tab" data-toggle="tab" href="#comparison" role="tab" aria-controls="comparison" aria-selected="false">Comparison</a>
+				<a class="nav-link" id="comparison-tab" data-toggle="tab" href="#comparison" role="tab" aria-controls="comparison" aria-selected="false" onclick="changeComparisonColour()">Comparison</a>
 			  </li>
 			</ul>
 		</nav>
 		
 		<div class="tab-content" id="nav-tabContent">
-			<div class="tab-pane show fade in active" id="gender" role="tabpanel" aria-labelledby="gender-tab">
+			<div class="tab-pane show fade" id="gender" role="tabpanel" aria-labelledby="gender-tab">
 			
 				<!-- Chart -->
 				<h2 class="chart-header text-center"><strong>Apple 2016</strong></h2>
