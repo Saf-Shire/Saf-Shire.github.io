@@ -85,13 +85,15 @@ var data=[{
 /* Automatically opens gender tab after load
 window.onload=function(){
   document.getElementById("gender-tab").click();
+     element.style.backgroundColor="#ffc2f8";
+   element.style.fontWeight="bold";
 };*/
 
 /* Sets Gender tab to a specific background colour and sets all other tabs to white on click */ 
 function changeGenderColour() {
    var element = document.getElementById("gender-tab");
    element.style.backgroundColor="#ffc2f8";
-      element.style.fontWeight="bold";
+   element.style.fontWeight="bold";
    
    var element = document.getElementById("race-tab");
    element.style.backgroundColor="white";
@@ -168,6 +170,7 @@ $(document).ready(function(){
     $(this).tab('show');
   });
 });
+
 // Select tab by name
 $('.nav-tabs a[href="#gender"]').tab('show')
 $('.nav-tabs a[href="#age"]').tab('show')
