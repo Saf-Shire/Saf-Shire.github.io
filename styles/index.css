@@ -49,8 +49,8 @@ h3{
 /* Style the tab */
 #race-tab, #gender-tab, #age-tab, #comparison-tab {
   border: solid;
-  border-bottom: none;
   border-color: black;
+  border-bottom: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
@@ -62,7 +62,13 @@ h3{
 }
  /* Spacing between tabs */
 #race-tab, #age-tab, #comparison-tab{
-	margin-left: 5px;
+	margin-left: 2%;
+}
+
+@media only screen and (max-width: 300) {
+  #race-tab, #gender-tab, #age-tab, #comparison-tab {
+    margin-left: 0%;
+  }
 }
 
 /* Comparison tab styling on load and tab panel background colours */
