@@ -85,30 +85,29 @@ var data=[{
 /* Automatically opens gender tab after load
 window.onload=function(){
   document.getElementById("gender-tab").click();
+   element.style.backgroundColor="#ffc2f8";
+   element.style.fontWeight="bold";
 };*/
+
+$(document).ready(function(){
+  $(".nav-tabs a").click(function(){
+    $(this).tab('show');
+  });
+});
+
+// Select tab by name
+$('.nav-tabs a[href="#gender"]').tab('show')
+$('.nav-tabs a[href="#age"]').tab('show')
+$('.nav-tabs a[href="#race"]').tab('show')
+$('.nav-tabs a[href="#comparison"]').tab('show')
+
+const button = document.querySelector('#gender-tab');
+button.addEventListener('click', () => { ddoptinbox.openclose('open') });
+button.click();
 
 /* Sets Gender tab to a specific background colour and sets all other tabs to white on click */ 
 function changeGenderColour() {
    var element = document.getElementById("gender-tab");
-   element.style.backgroundColor="#ffc2f8";
-      element.style.fontWeight="bold";
-   
-   var element = document.getElementById("race-tab");
-   element.style.backgroundColor="white";
-   element.style.fontWeight="initial";
-   
-   var element = document.getElementById("age-tab");
-   element.style.backgroundColor="white";
-   element.style.fontWeight="initial";
-   
-   var element = document.getElementById("comparison-tab");
-   element.style.backgroundColor="white";
-   element.style.fontWeight="initial";
-}
-
-/* Sets Comparison tab to a specific background colour and sets all other tabs to white on click */ 
-function changeComparisonColour() {
-   var element = document.getElementById("comparison-tab");
    element.style.backgroundColor="#ffc2f8";
    element.style.fontWeight="bold";
    
@@ -120,7 +119,7 @@ function changeComparisonColour() {
    element.style.backgroundColor="white";
    element.style.fontWeight="initial";
    
-   var element = document.getElementById("gender-tab");
+   var element = document.getElementById("comparison-tab");
    element.style.backgroundColor="white";
    element.style.fontWeight="initial";
 }
@@ -163,13 +162,21 @@ function changeAgeColour() {
    element.style.fontWeight="initial";
 }
 
-$(document).ready(function(){
-  $(".nav-tabs a").click(function(){
-    $(this).tab('show');
-  });
-});
-// Select tab by name
-$('.nav-tabs a[href="#gender"]').tab('show')
-$('.nav-tabs a[href="#age"]').tab('show')
-$('.nav-tabs a[href="#race"]').tab('show')
-$('.nav-tabs a[href="#comparison"]').tab('show')
+/* Sets Comparison tab to a specific background colour and sets all other tabs to white on click */ 
+function changeComparisonColour() {
+   var element = document.getElementById("comparison-tab");
+   element.style.backgroundColor="#ffc2f8";
+   element.style.fontWeight="bold";
+   
+   var element = document.getElementById("race-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("age-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("gender-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+}
