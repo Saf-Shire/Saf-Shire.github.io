@@ -1,4 +1,4 @@
-@@ -0,0 +1,85 @@
+/*@@ -0,0 +1,85 @@
 
 var allLabels=[
 labelsservice = ['Male Service Workers', 'Female Service Workers'],
@@ -80,7 +80,96 @@ var data=[{
 };
 
 
+ Plotly.newPlot('myDiv', data, layout, {scrollZoom: true});*/
+ 
+/* Automatically opens gender tab after load
+window.onload=function(){
+  document.getElementById("gender-tab").click();
+};*/
 
+/* Sets Gender tab to a specific background colour and sets all other tabs to white on click */ 
+function changeGenderColour() {
+   var element = document.getElementById("gender-tab");
+   element.style.backgroundColor="#ffc2f8";
+      element.style.fontWeight="bold";
+   
+   var element = document.getElementById("race-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("age-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("comparison-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+}
 
- Plotly.newPlot('myDiv', data, layout, {scrollZoom: true});
-    
+/* Sets Comparison tab to a specific background colour and sets all other tabs to white on click */ 
+function changeComparisonColour() {
+   var element = document.getElementById("comparison-tab");
+   element.style.backgroundColor="#ffc2f8";
+   element.style.fontWeight="bold";
+   
+   var element = document.getElementById("race-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("age-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("gender-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+}
+
+/* Sets Race tab to a specific background colour and sets all other tabs to white on click */ 
+function changeRaceColour() {
+   var element = document.getElementById("race-tab");
+   element.style.backgroundColor="#ffc2f8";
+   element.style.fontWeight="bold";
+   
+   var element = document.getElementById("gender-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("age-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("comparison-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+}
+
+/* Sets Age tab to a specific background colour and sets all other tabs to white on click */ 
+function changeAgeColour() {
+   var element = document.getElementById("age-tab");
+   element.style.backgroundColor="#ffc2f8";
+   element.style.fontWeight="bold";
+   
+   var element = document.getElementById("race-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("gender-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+   
+   var element = document.getElementById("comparison-tab");
+   element.style.backgroundColor="white";
+   element.style.fontWeight="initial";
+}
+
+$(document).ready(function(){
+  $(".nav-tabs a").click(function(){
+    $(this).tab('show');
+  });
+});
+// Select tab by name
+$('.nav-tabs a[href="#gender"]').tab('show')
+$('.nav-tabs a[href="#age"]').tab('show')
+$('.nav-tabs a[href="#race"]').tab('show')
+$('.nav-tabs a[href="#comparison"]').tab('show')
