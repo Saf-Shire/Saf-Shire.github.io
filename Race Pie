@@ -1,0 +1,122 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import plotly.graph_objs as go
+
+labelsservice = ['Hispanic or Latino Service Workers', 'White Service Workers', 'Black or African American Service Workers', 'Native Hawaiian or Pacific Islander Service Workers', 'Asian Service Workers', 'American Indian Alaskan Native Service Workers', 'Two or More Races Service Workers']
+labelssales = ['Hispanic or Latino Sales Workers', 'White Sales Workers', 'Black or African American Sales Workers', 'Native Hawaiian or Pacific Islander Sales Workers', 'Asian Sales Workers', 'American Indian Alaskan Native Sales Workers', 'Two or More Races Sales Workers']
+labelman = ['Hispanic or Latino Managers', 'White Managers', 'Black or African American Managers', 'Native Hawaiian or Pacific Islander Managers', 'Asian Managers', 'American Indian Alaskan Native Managers', 'Two or More Races Managers']
+labelexec = ['Hispanic or Latino Executives', 'White Executives', 'Black or African American Executives', 'Native Hawaiian or Pacific Islander Executives', 'Asian Executives', 'American Indian Alaskan Native Executives', 'Two or More Races Executives']
+labelscraft = ['Hispanic or Latino Craft Workers', 'White Craft Workers', 'Black or African American Craft Workers', 'Native Hawaiian or Pacific Islander Craft Workers', 'Asian Craft Workers', 'American Indian Alaskan Native Craft Workers', 'Two or More Races Craft Workers']
+labelspro = ['Hispanic or Latino Professionals', 'White Professionals', 'Black or African American Professionals', 'Native Hawaiian or Pacific Islander Professionals', 'Asian Professionals', 'American Indian Alaskan Native Professionals', 'Two or More Races Professionals']
+labelsgrads = ['Hispanic or Latino Graduates', 'White Graduates', 'Black or African American Graduates', 'Native Hawaiian or Pacific Islander Graduates', 'Asian Graduates', 'American Indian Alaskan Native Graduates', 'Two or More Races Professionals']
+
+values_grads = [50, 50, 50, 50,50, 50, 50]
+values_service = [229, 92, 23, 6, 60, 1, 7]
+values_sales = [3822, 12036, 2980, 158, 1610, 82, 627]
+values_man = [560, 5344, 288, 18, 1889, 17, 89]
+values_exec = [2, 88, 3, 0, 14, 0, 0]
+values_craft = [13, 57, 2, 0, 13, 0, 0]
+values_pro = [1181, 11647, 400, 47, 9622, 42, 261]
+
+colors_grad = ['#8B0000', '#FFD700', '#663399', '#008080', '#006400', '#191970', '#000000']
+colors_service = ['#B22222', '#FFFF00', '#9370DB', '#008B8B', '#008000', '#00008B', '#2F4F4F']
+colors_sales = ['#FF0000', '#F0E68C', '#BA55D3', '#20B2AA', '#2E8B57', '#0000CD', '#696969']
+colors_craft = ['#DC143C', '#EEE8AA','#FF00FF', '#66CDAA', '#228B22', '#0000FF', '#808080']
+colors_management = ['#FFA07A', '#FAFAD2', '#DDA0DD', '#8FBC8B', '#6B8E23', '#4169E1', '#708090']
+colors_pro = ['#E9967A', '#FFFACD', '#D8BFD8', '#00FA9A', '#32CD32', '#6495ED', '#778899']
+colors_exec = ['#FA8072', '#FFFFE0', '#E6E6FA', '#90EE90', '#9ACD32', '#00BFFF', '#A9A9A9']
+
+
+# layout_service= dict(height=1000, width=1000,)
+# layout_sales= dict(height=800, width=800,)
+# layout_man= dict(height=600, width=600,)
+# layout_exec= dict(height=400, width=400,)
+
+Executives = go.Pie(
+    labels = labelexec,
+    values = values_exec,
+    direction='counterclockwise',
+    hole = 0.3,
+    marker_colors=colors_exec,
+    hovertext="Insert target here.",
+    #sort = False,
+    #layout=layout_exec,
+)
+
+Professionals = go.Pie(
+    labels = labelspro,
+    values= values_pro,
+    direction='counterclockwise',
+    hole=0.4,
+    marker_colors=colors_pro,
+    hovertext="Insert target here.",
+    #sort = False,
+    #layout=layout_man,
+)
+
+Management = go.Pie(
+    labels = labelman,
+    values= values_man,
+    direction='counterclockwise',
+    hole=0.5,
+    marker_colors=colors_management,
+    hovertext="Insert target here.",
+    #sort=False,
+    #layout=layout_man,
+)
+
+CraftWork = go.Pie(
+    labels = labelscraft,
+    values= values_craft,
+    direction='counterclockwise',
+    hole=0.6,
+    marker_colors=colors_craft,
+    hovertext="Insert target here.",
+    #sort = False,
+    #layout=layout_man,
+)
+
+Sales = go.Pie(
+    labels=labelssales,
+    values=values_sales,
+    direction='counterclockwise',
+    hole=0.7,
+    marker_colors=colors_sales,
+    hovertext="Insert target here.",
+    #sort = False,
+    #layout=layout_sales,
+)
+
+Services = go.Pie(
+    labels=labelsservice,
+    values=values_service,
+    direction='counterclockwise',
+    hole=0.8, 
+    marker_colors=colors_service,
+    hovertext="Insert target here."
+    #sort = False
+    #layout=layout_service,
+)
+
+Graduates = go.Pie(
+    labels=labelsgrads,
+    values=values_grads,
+    direction='counterclockwise',
+    hole=0.90, 
+    marker_colors=colors_grad,
+    hovertext="Insert target here."
+    #sort = False,
+    #layout=layout_service,
+)
+
+fig = go.FigureWidget(data=[Executives, Professionals, Management, CraftWork, Sales, Services, Graduates,],)
+
+fig.update_traces(textposition='inside', textinfo='none')
+
+fig.update_layout(
+    annotations=[dict(text='CEO', x=0.5, y=0.5, font_size=30, showarrow=False)],
+    showlegend=False,
+    #sort = False,
+)
+
+fig.show()    
