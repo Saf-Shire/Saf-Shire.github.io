@@ -2,14 +2,41 @@ html {
   scroll-behavior: smooth;
 }
 
+body > nav{
+	background-color: purple;
+	font-family: 'Open Sans', sans-serif;
+}
+
 /* font size should be 15px minimum to meet WCAG 2.1 guidelines */
 p {
 	font-size: 15px;
 	font-family: 'Open Sans', sans-serif;
 }
 
+#navbarSupportedContent > form > input{
+	font-size: 15px;
+}
+
+#navbarSupportedContent > form > button{
+	font-size: 15px;
+	background-color:#ffc2f8;
+	color:black;
+}
+
+#navbarSupportedContent > form > button:hover{
+	font-size: 15px;
+	background-color:#ff64fc;
+	color:white;
+	font-weight: bold;
+}
+
 a{
 	font-size: 15px;
+}
+
+a.nav-link{
+	font-size:15px;
+	font-weight: bold;
 }
 
 body > div:nth-child(3) > div > div:nth-child(1) > a > button{
@@ -21,7 +48,6 @@ body > div.container > div.row > div > a > button{
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 2%;
 }
-
 
 h1{
 	text-align: center;
