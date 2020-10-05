@@ -42,6 +42,29 @@ body > div.container > div:nth-child(4) > div > div:nth-child(1) > div > a > but
 	background-color:#35155e;
 	color:white;
 }
+#race > p.margin, #comparison > p.margin, #age > p.margin{
+	text-align: center;
+	font-weight: normal;
+}
+
+ul.tick {
+  list-style: none;
+}
+
+ul.tick li:before {
+  content: '✓';
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right:5px;
+}
+
+ul.tick li {
+	font-size:15px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	text-align:center;
+}
 
 a{
 	font-size: 15px;
@@ -61,11 +84,7 @@ body > div.container > div.row > div > a > button{
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 2%;
 }
-{
-		font-size: 15px;
-	background-color:#ffc2f8;
-	color:black;
-}
+
 h1{
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
@@ -81,7 +100,7 @@ h3{
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5%;
-	margin-bottom: 5%;
+	margin-bottom: 3%;
 }
 
 .pink-underline{
